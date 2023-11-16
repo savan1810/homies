@@ -32,7 +32,7 @@ const Navbar = () => {
     return (
         <div className={`
         ${pathname === '/' && ' text-white '}  
-        ${pathname === '/about' && ' border-b '}  
+        ${pathname === '/about' && ' border-b shadow-2xl '}  
         ${pathname === '/login' && 'bg-black text-[#e5e7eb]'} 
         ${pathname === '/signup' && 'bg-black text-[#e5e7eb] '}
         ${pathname === '/apartment' && '  border-b '}
