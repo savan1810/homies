@@ -5,15 +5,19 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import '../style/style.css'
 import { usePathname } from 'next/navigation'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 const Navbar = () => {
+    useEffect(() => {
+        AOS.init();
+      }, [])
     const pathname = usePathname()
 
 
@@ -27,17 +31,17 @@ const Navbar = () => {
     };
     return (
         <div className={`
-        ${pathname === '/about' && 'bg-black text-gray-200 '}  
-        ${pathname === '/login' && 'bg-black text-gray-200'} 
-        ${pathname === '/signup' && 'bg-black text-gray-200 '}
-        ${pathname === '/apartment' && 'bg-black text-gray-200 '}
-        
+        ${pathname === '/' && ' text-white '}  
+        ${pathname === '/about' && ' border-b '}  
+        ${pathname === '/login' && 'bg-black text-[#e5e7eb]'} 
+        ${pathname === '/signup' && 'bg-black text-[#e5e7eb] '}
+        ${pathname === '/apartment' && '  border-b '}
         `}>
 
-            <div className={`py-2 ${(pathname === '/') && ' border-b border-b-gray-500'}  ${(pathname === '/apartment') && ' bg-black '} ${pathname === '/about' && ' bg-black '} ${pathname === '/login' && ' bg-black'}  text-[#e5e7eb] opacity-90 flex items-center justify-between px-8`}>
+            <div className={`py-2     ${pathname === '/login' && ' bg-black'}   opacity-90 flex items-center justify-between px-8`}>
                 <div className='flex justify-center items-center gap-4'>
                     <Link href='/'>
-                        <Image src={`${pathname === '/about' | '/apartment' ? '/logo_final.png' : '/logo_final.png'}`} height={90} width={90} alt='Homies' />
+                        <Image src={`/logo_final.png`} height={90} width={90} alt='Homies' />
                     </Link>
                     {/* <Link href='/'>
                     <Image src="/insta.jpeg" height={30} width={30} alt='Instagram' />
@@ -55,16 +59,15 @@ const Navbar = () => {
                     </div>
                 </div> */}
                 <div className='hidden lg:flex'>
-                    <ul className={`ml-4 ${(pathname === '/about') && 'text-gray-50'} ${(pathname === '/apartment') && 'text-gray-50'}  flex items-center justify-between gap-8  `}>
-                        <li ><Link href='/' className={` relative border_transition  ${pathname === '/' && 'text-blue-400'}`}>Home</Link></li>
-                        <li ><Link href='/about' className={` relative border_transition  ${pathname === '/about' && 'text-blue-400'}`}>About Us</Link></li>
-                        <li ><Link href='/apartment' className={`relative border_transition  ${pathname === '/apartment' && 'text-blue-400'}`}>Apartments</Link></li>
+                    <ul className={`ml-4 flex items-center justify-between gap-8  `}>
+                        <li ><Link href='/' className={` relative border_transition  ${pathname === '/' && ''}`}>Home</Link></li>
+                        <li ><Link href='/about' className={` relative border_transition  ${pathname === '/about' && ''}`}>About Us</Link></li>
+                        <li ><Link href='/apartment' className={`relative border_transition  ${pathname === '/apartment' && ''}`}>Apartments</Link></li>
                         <li><Link href='/login'>
-
-
-                            <button className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300  font-medium rounded-lg text-sm px-8 py-2.5 text-center  '
-
-                            >
+                            <button style={{
+                                // backgroundImage: "linear-gradient(to bottom, #ff4495 0%, #ff6d6d 100%)",
+                                
+                            }} className={`${pathname === '/apartment' ? 'border hover:shadow-lg':'border-2]'} ${pathname === '/about' ? 'border hover:shadow-lg':'border-2   '}  ${pathname === '/' && 'border-2 hover:bg-gradient-to-b from-[#ff4495] to-[#ff6d6d]'} ${pathname === '/login' && 'border-2 hover:bg-gradient-to-b from-[#ff4495] to-[#ff6d6d]'} ${pathname === '/signup' && 'border-2 hover:bg-gradient-to-b from-[#ff4495] to-[#ff6d6d]'} transition ease-out duration-1500  rounded-full   delay-150  -z-10  font-normal text-base px-8 py-2 text-center  -1 tracking-wider`} > 
                                 Login
 
                             </button>

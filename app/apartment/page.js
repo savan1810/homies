@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight,faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { RxDotFilled } from 'react-icons/rx';
 import Navbar from '@/components/Navbar'
 
@@ -39,7 +39,7 @@ const Page = () => {
         },
 
     ];
-    const slides3 = [
+    const slides3= [
         {
             url: '/3.webp',
         },
@@ -215,7 +215,7 @@ const Page = () => {
         const newIndex = isLastSlide ? 0 : currentIndex3 + 1;
         setCurrentIndex3(newIndex);
     };
-
+    
     const nextSlide4 = (event) => {
         event.preventDefault()
 
@@ -250,290 +250,344 @@ const Page = () => {
         const newIndex = isLastSlide ? 0 : currentIndex8 + 1;
         setCurrentIndex8(newIndex);
     };
-    const goToSlide1 = (slideIndex, event) => {
+    const goToSlide1 = (slideIndex,event) => {
         event.preventDefault()
 
         setCurrentIndex1(slideIndex);
     };
-
-    const goToSlide2 = (slideIndex, event) => {
+    
+    const goToSlide2 = (slideIndex,event) => {
         event.preventDefault()
 
         setCurrentIndex2(slideIndex);
     };
-
-    const goToSlide3 = (slideIndex, event) => {
+    
+    const goToSlide3 = (slideIndex,event) => {
         event.preventDefault()
         setCurrentIndex3(slideIndex);
     };
-
-    const goToSlide4 = (slideIndex, event) => {
+    
+    const goToSlide4 = (slideIndex,event) => {
         event.preventDefault()
         setCurrentIndex4(slideIndex);
     };
-    const goToSlide5 = (slideIndex, event) => {
+    const goToSlide5 = (slideIndex,event) => {
         event.preventDefault()
         setCurrentIndex5(slideIndex);
     };
-    const goToSlide6 = (slideIndex, event) => {
+    const goToSlide6 = (slideIndex,event) => {
         event.preventDefault()
         setCurrentIndex6(slideIndex);
     };
-    const goToSlide7 = (slideIndex, event) => {
+    const goToSlide7 = (slideIndex,event) => {
         event.preventDefault()
         setCurrentIndex7(slideIndex);
     };
-    const goToSlide8 = (slideIndex, event) => {
+    const goToSlide8 = (slideIndex,event) => {
         event.preventDefault()
         setCurrentIndex8(slideIndex);
     };
-
+    
 
 
     return (
         <div>
-            <Navbar />
-            <div className='bg-[#0A0A0A] pb-[30px]'>
-                <div className=" w-5/6  mx-auto grid gap-x-6  xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-                    <div className='relative mt-[30px] mx-auto group px-[20px] py-[20px] bg-[#0A0A0A]' style={{
-                        boxShadow: "0px 20px 40px 5px rgb(0, 0, 0, 0.6)", borderRadius: "10px"
-                    }}>
-                        <div className="relative   mb-2 rounded-[10px] flex" >
-                            <Image height={270} width={270} className="rounded-[10px] h-[300px] w-[300px] sm:h-[270px] sm:w-[270px] sm:object-cover sm:aspect-square" src={slides1[currentIndex1].url} alt="" />
-                        </div>
-                        <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
-                            <FontAwesomeIcon onClick={prevSlide1} icon={faAngleLeft} />
-                        </div>
-                        {/* Right Arrow */}
-                        <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
-                            <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide1} />
-                        </div>
-                        <div className='flex absolute top-[60%] left-[92px] z-10 justify-center pb-2 '>
-                            {slides1.map((slide, slideIndex) => (
-                                <div
-                                    key={slideIndex}
-                                    onClick={() => goToSlide1(slideIndex)}
-                                    className='text-xl cursor-pointer'
-                                >
-                                    {currentIndex1 === slideIndex ? <RxDotFilled className='text-white' /> : <RxDotFilled className='text-black/40' />}
-
-                                </div>))}
-                        </div>
-                        <div className='absolute top-[1%] left-[85%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </div>
-                        <h2 className="font-bold text-blue-500">
-                            Torino, Piemonte, Italy</h2>
-                        <h3 className="text-sm text-gray-500">Noble room into the historical Torino</h3>
-                        <h3 className="text-sm text-gray-500">2 Rooms</h3>
-                        <div className="mt-1 flex items-center">
-                            <span className="font-medium mr-1 text-gray-400">$1000<span> per month</span></span>
-                        </div>
-
+        <Navbar/>
+        <div className='bg-gray-50/10 '>
+            <div className="pt-10 w-[90%] box-border cursor-pointer  mx-auto grid gap-x-6 gap-y-8 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 z-10">
+                <div className='relative mx-auto group box-border cursor-pointer' >
+                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                        <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px] sm:object-cover sm:aspect-square" src={slides1[currentIndex1].url} alt="" />
+                    </div>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                        <FontAwesomeIcon onClick={prevSlide1} icon={faAngleLeft} />
+                    </div>
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                        <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide1} />
+                    </div>
+                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                        {slides1.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide1(slideIndex)}
+                                className='text-xl cursor-pointer'
+                            >   
+                                {currentIndex1===slideIndex?<RxDotFilled  className='text-white'/>:<RxDotFilled  className='text-black/40'/>}
+                                
+                            </div>))}
+                    </div>
+                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </div>
+                    <h2 className=" text-lg font-medium  mt-2 text-[#222222]">
+                        Torino, Piemonte, Italy</h2>
+                    <h3 className=" text-gray-500">Noble room into the historical Torino</h3>
+                    <h3 className=" text-gray-500">2 Rooms</h3>
+                    <div className="mt-1 flex items-center underline text-[#222222]">
+                        <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
                     </div>
 
+                </div>
 
-                    <div className='relative mt-[30px] mx-auto group px-[20px] py-[20px] bg-[#0A0A0A]' style={{
-                        boxShadow: "0px 20px 40px 5px rgb(0, 0, 0, 0.6)", borderRadius: "10px"
-                    }}>
-                        <div className="relative   mb-2 rounded-2xl flex">
-                            <Image height={270} width={270} className="rounded-2xl h-[300px] w-[300px] sm:h-[270px] sm:w-[270px]  sm:object-cover sm:aspect-square" src={slides2[currentIndex2].url} alt="" />
-                        </div>
 
-                        <div className='z-10 absolute top-[1%] left-[85%] text-black opacity-60  bg-opacity-50 rounded-2xl '>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </div>
-                        <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
-                            <FontAwesomeIcon onClick={prevSlide2} icon={faAngleLeft} />
-                        </div>
-                        {/* Right Arrow */}
-                        <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
-                            <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide2} />
-                        </div>
-                        <div className='flex absolute top-[60%] left-[92px] z-10 justify-center pb-2 '>
-                            {slides2.map((slide, slideIndex) => (
-                                <div
-                                    key={slideIndex}
-                                    onClick={() => goToSlide2(slideIndex)}
-                                    className='text-xl cursor-pointer'
-                                >
-                                    {currentIndex2 === slideIndex ? <RxDotFilled className='text-white' /> : <RxDotFilled className='text-black/40' />}
-
-                                </div>))}
-                        </div>
-                        <h2 className="font-bold text-blue-500">
-
-                            Nantes, Pays de la Loire, France</h2>
-                        <h3 className="text-sm text-gray-500">Centre place Graslin - room La Cambronne</h3>
-                        <h3 className="text-sm text-gray-500">3 Rooms</h3>
-                        <div className="mt-1 flex items-center">
-                            <span className="font-medium mr-1 text-gray-400">$1000<span> per month</span></span>
-                        </div>
+                <div className='relative mx-auto group box-border cursor-pointer  ' >
+                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                        <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides2[currentIndex2].url} alt="" />
                     </div>
-                    <div className='relative mt-[30px] mx-auto group px-[20px] py-[20px] bg-[#0A0A0A]' style={{
-                        boxShadow: "0px 20px 40px 5px rgb(0, 0, 0, 0.6)", borderRadius: "10px"
-                    }}>
-                        <div className="relative  mb-2 rounded-2xl flex">
-                            <Image height={270} width={270} className="rounded-2xl h-[300px] w-[300px] sm:h-[270px] sm:w-[270px]  sm:object-cover sm:aspect-square" src={slides3[currentIndex3].url} alt="" />
-                        </div>
-                        <div className='z-10 absolute top-[1%] left-[85%] text-black opacity-60 bg-opacity-50 rounded-2xl '>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="whitesmoke" className="w-8 h-8  ">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </div>
-                        <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
-                            <FontAwesomeIcon onClick={prevSlide3} icon={faAngleLeft} />
-                        </div>
-                        {/* Right Arrow */}
-                        <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
-                            <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide3} />
-                        </div>
-                        <div className='flex absolute top-[60%] left-[92px] z-10 justify-center pb-2 '>
-                            {slides3.map((slide, slideIndex) => (
-                                <div
-                                    key={slideIndex}
-                                    onClick={() => goToSlide3(slideIndex)}
-                                    className='text-xl cursor-pointer'
-                                >
-                                    {currentIndex3 === slideIndex ? <RxDotFilled className='text-white' /> : <RxDotFilled className='text-black/40' />}
+                    <div className='z-10 absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60  bg-opacity-50 rounded-2xl '>
 
-                                </div>))}
-                        </div>
-                        <h2 className="font-bold text-blue-500">
-
-                            Seddon, Victoria, Australia</h2>
-                        <h3 className="text-sm text-gray-500">Comfy room in modern apartment</h3>
-                        <h3 className="text-sm text-gray-500">2 Rooms</h3>
-                        <div className="mt-1 flex items-center">
-                            <span className="font-medium mr-1 text-gray-400">$1000<span > per month</span></span>
-                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
                     </div>
-                    <div className='relative mt-[30px] mx-auto group px-[20px] py-[20px] bg-[#0A0A0A]' style={{
-                        boxShadow: "0px 20px 40px 5px rgb(0, 0, 0, 0.6)", borderRadius: "10px"
-                    }}>
-                        <div className="relative   mb-2 rounded-2xl flex">
-                            <Image height={270} width={270} className="rounded-2xl h-[300px] w-[300px] sm:h-[270px] sm:w-[270px]  sm:object-cover sm:aspect-square" src={slides4[currentIndex4].url} alt="" />
-                        </div>
-                        <div className='z-10 absolute top-[1%] left-[85%] text-black opacity-60   bg-opacity-50 rounded-2xl '>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </div>
-                        <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
-                            <FontAwesomeIcon onClick={prevSlide4} icon={faAngleLeft} />
-                        </div>
-                        {/* Right Arrow */}
-                        <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
-                            <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide4} />
-                        </div>
-                        <div className='flex absolute top-[60%] left-[92px] z-10 justify-center pb-2 '>
-                            {slides4.map((slide, slideIndex) => (
-                                <div
-                                    key={slideIndex}
-                                    onClick={() => goToSlide4(slideIndex)}
-                                    className='text-xl cursor-pointer'
-                                >
-                                    {currentIndex4 === slideIndex ? <RxDotFilled className='text-white' /> : <RxDotFilled className='text-black/40' />}
-
-                                </div>))}
-                        </div>
-                        <h2 className="font-bold text-blue-500">
-
-
-
-                            London, England, United Kingdom</h2>
-                        <h3 className="text-sm text-gray-500">Light spacious central London apartment</h3>
-                        <h3 className="text-sm text-gray-500">2 Rooms</h3>
-                        <div className="mt-1 flex items-center">
-                            <span className="font-medium mr-1 text-gray-400">$1000<span> per month</span></span>
-                        </div>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                        <FontAwesomeIcon onClick={prevSlide2} icon={faAngleLeft} />
                     </div>
-                    <div className='relative mt-[30px] mx-auto group px-[20px] py-[20px] bg-[#0A0A0A]' style={{
-                        boxShadow: "0px 20px 40px 5px rgb(0, 0, 0, 0.6)", borderRadius: "10px"
-                    }}>
-                        <div className="relative   mb-2 rounded-2xl flex">
-                            <Image height={270} width={270} className="rounded-2xl h-[300px] w-[300px] sm:h-[270px] sm:w-[270px] sm:object-cover sm:aspect-square" src={slides5[currentIndex5].url} alt="" />
-                        </div>
-                        <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
-                            <FontAwesomeIcon onClick={prevSlide5} icon={faAngleLeft} />
-                        </div>
-                        {/* Right Arrow */}
-                        <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
-                            <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide5} />
-                        </div>
-                        <div className='flex absolute top-[60%] left-[92px] z-10 justify-center pb-2 '>
-                            {slides5.map((slide, slideIndex) => (
-                                <div
-                                    key={slideIndex}
-                                    onClick={() => goToSlide5(slideIndex)}
-                                    className='text-xl cursor-pointer'
-                                >
-                                    {currentIndex5 === slideIndex ? <RxDotFilled className='text-white' /> : <RxDotFilled className='text-black/40' />}
-
-                                </div>))}
-                        </div>
-                        <div className='absolute top-[1%] left-[85%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </div>
-                        <h2 className="font-bold text-blue-500">
-                            Torino, Piemonte, Italy</h2>
-                        <h3 className="text-sm text-gray-500">Noble room into the historical Torino</h3>
-                        <h3 className="text-sm text-gray-500">2 Rooms</h3>
-                        <div className="mt-1 flex items-center">
-                            <span className="font-medium mr-1 text-gray-400">$1000<span> per month</span></span>
-                        </div>
-
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                        <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide2} />
                     </div>
-                    <div className='relative mt-[30px] mx-auto group px-[20px] py-[20px] bg-[#0A0A0A]' style={{
-                        boxShadow: "0px 20px 40px 5px rgb(0, 0, 0, 0.6)", borderRadius: "10px"
-                    }}>
-                        <div className="relative  mb-2 rounded-2xl flex">
-                            <Image height={270} width={270} className="rounded-2xl h-[300px] w-[300px] sm:h-[270px] sm:w-[270px] sm:object-cover sm:aspect-square" src={slides6[currentIndex6].url} alt="" />
-                        </div>
-                        <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
-                            <FontAwesomeIcon onClick={prevSlide6} icon={faAngleLeft} />
-                        </div>
-                        {/* Right Arrow */}
-                        <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
-                            <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide6} />
-                        </div>
-                        <div className='flex absolute top-[60%] left-[92px] z-10 justify-center pb-2 '>
-                            {slides6.map((slide, slideIndex) => (
-                                <div
-                                    key={slideIndex}
-                                    onClick={() => goToSlide6(slideIndex)}
-                                    className='text-xl cursor-pointer'
-                                >
-                                    {currentIndex6 === slideIndex ? <RxDotFilled className='text-white' /> : <RxDotFilled className='text-black/40' />}
+                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                        {slides2.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide2(slideIndex)}
+                                className='text-xl cursor-pointer'
+                            >   
+                                {currentIndex2===slideIndex?<RxDotFilled  className='text-white'/>:<RxDotFilled  className='text-black/40'/>}
+                                
+                            </div>))}
+                    </div>
+                    <h2 className=" text-lg font-medium  mt-2 text-[#222222]">
+                        Torino, Piemonte, Italy</h2>
+                    <h3 className=" text-gray-500">Noble room into the historical Torino</h3>
+                    <h3 className=" text-gray-500">2 Rooms</h3>
+                    <div className="mt-1 flex items-center underline text-[#222222]">
+                        <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
+                    </div>
+                </div>
+                <div className="relative mx-auto group box-border cursor-pointer  " >
+                    <div className="relative  -z-10 mb-2 rounded-2xl flex">
+                        <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides3[currentIndex3].url} alt="" />
+                    </div>
+                    <div className='z-10 absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl '>
 
-                                </div>))}
-                        </div>
-                        <div className='absolute top-[1%] left-[85%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </div>
-                        <h2 className="font-bold text-blue-500">
-                            Torino, Piemonte, Italy</h2>
-                        <h3 className="text-sm text-gray-500">Noble room into the historical Torino</h3>
-                        <h3 className="text-sm text-gray-500">2 Rooms</h3>
-                        <div className="mt-1 flex items-center">
-                            <span className="font-medium mr-1 text-gray-400">$1000<span> per month</span></span>
-                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="whitesmoke" className="w-8 h-8  ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </div>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                        <FontAwesomeIcon onClick={prevSlide3} icon={faAngleLeft} />
+                    </div>
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                        <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide3} />
+                    </div>
+                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                        {slides3.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide3(slideIndex)}
+                                className='text-xl cursor-pointer'
+                            >   
+                                {currentIndex3===slideIndex?<RxDotFilled  className='text-white'/>:<RxDotFilled  className='text-black/40'/>}
+                                
+                            </div>))}
+                    </div>
+                    <h2 className=" text-lg font-medium  mt-2 text-[#222222]">
+                        Torino, Piemonte, Italy</h2>
+                    <h3 className=" text-gray-500">Noble room into the historical Torino</h3>
+                    <h3 className=" text-gray-500">2 Rooms</h3>
+                    <div className="mt-1 flex items-center underline text-[#222222]">
+                        <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
+                    </div>
+                </div>
+                <div className='relative mx-auto group box-border cursor-pointer  ' >
+                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                        <Image height={285} width={300} className="rounded-2xl  h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides4[currentIndex4].url} alt="" />
+                    </div>
+                    <div className='z-10 absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60   bg-opacity-50 rounded-2xl '>
 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </div>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                        <FontAwesomeIcon onClick={prevSlide4} icon={faAngleLeft} />
+                    </div>
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                        <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide4} />
+                    </div>
+                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                        {slides4.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide4(slideIndex)}
+                                className='text-xl cursor-pointer'
+                            >   
+                                {currentIndex4===slideIndex?<RxDotFilled  className='text-white'/>:<RxDotFilled  className='text-black/40'/>}
+                                
+                            </div>))}
+                    </div>
+                    <h2 className=" text-lg font-medium  mt-2 text-[#222222]">
+                        Torino, Piemonte, Italy</h2>
+                    <h3 className=" text-gray-500">Noble room into the historical Torino</h3>
+                    <h3 className=" text-gray-500">2 Rooms</h3>
+                    <div className="mt-1 flex items-center underline text-[#222222]">
+                        <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
+                    </div>
+                </div>
+                <div className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
+                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                        <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides5[currentIndex5].url} alt="" />
+                    </div>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                        <FontAwesomeIcon onClick={prevSlide5} icon={faAngleLeft} />
+                    </div>
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                        <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide5} />
+                    </div>
+                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                        {slides5.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide5(slideIndex)}
+                                className='text-xl cursor-pointer'
+                            >   
+                                {currentIndex5===slideIndex?<RxDotFilled  className='text-white'/>:<RxDotFilled  className='text-black/40'/>}
+                                
+                            </div>))}
+                    </div>
+                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </div>
+                    <h2 className=" text-lg font-medium  mt-2 text-[#222222]">
+                        Torino, Piemonte, Italy</h2>
+                    <h3 className=" text-gray-500">Noble room into the historical Torino</h3>
+                    <h3 className=" text-gray-500">2 Rooms</h3>
+                    <div className="mt-1 flex items-center underline text-[#222222]">
+                        <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
+                    </div>
+
+                </div>
+                <div className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
+                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                        <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides6[currentIndex6].url} alt="" />
+                    </div>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                        <FontAwesomeIcon onClick={prevSlide6} icon={faAngleLeft} />
+                    </div>
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                        <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide6} />
+                    </div>
+                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                        {slides6.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide6(slideIndex)}
+                                className='text-xl cursor-pointer'
+                            >   
+                                {currentIndex6===slideIndex?<RxDotFilled  className='text-white'/>:<RxDotFilled  className='text-black/40'/>}
+                                
+                            </div>))}
+                    </div>
+                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </div>
+                    <h2 className=" text-lg font-medium  mt-2 text-[#222222]">
+                        Torino, Piemonte, Italy</h2>
+                    <h3 className=" text-gray-500">Noble room into the historical Torino</h3>
+                    <h3 className=" text-gray-500">2 Rooms</h3>
+                    <div className="mt-1 flex items-center underline text-[#222222]">
+                        <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
+                    </div>
+
+                </div>
+                <div className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
+                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                        <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px] sm:object-cover sm:aspect-square" src={slides7[currentIndex7].url} alt="" />
+                    </div>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                        <FontAwesomeIcon onClick={prevSlide7} icon={faAngleLeft} />
+                    </div>
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                        <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide7} />
+                    </div>
+                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                        {slides7.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide7(slideIndex)}
+                                className='text-xl cursor-pointer'
+                            >   
+                                {currentIndex7===slideIndex?<RxDotFilled  className='text-white'/>:<RxDotFilled  className='text-black/40'/>}
+                                
+                            </div>))}
+                    </div>
+                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </div>
+                    <h2 className=" text-lg font-medium  mt-2 text-[#222222]">
+                        Torino, Piemonte, Italy</h2>
+                    <h3 className=" text-gray-500">Noble room into the historical Torino</h3>
+                    <h3 className=" text-gray-500">2 Rooms</h3>
+                    <div className="mt-1 flex items-center underline text-[#222222]">
+                        <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
+                    </div>
+
+                </div>
+                <div className='relative mx-auto group box-border cursor-pointer  mb-14' >
+                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                        <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides8[currentIndex8].url} alt="" />
+                    </div>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                        <FontAwesomeIcon onClick={prevSlide8} icon={faAngleLeft} />
+                    </div>
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                        <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide8} />
+                    </div>
+                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                        {slides8.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide8(slideIndex)}
+                                className='text-xl cursor-pointer'
+                            >   
+                                {currentIndex8===slideIndex?<RxDotFilled  className='text-white'/>:<RxDotFilled  className='text-black/40'/>}
+                                
+                            </div>))}
+                    </div>
+                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </div>
+                    <h2 className=" text-lg font-medium  mt-2 text-[#222222]">
+                        Torino, Piemonte, Italy</h2>
+                    <h3 className=" text-gray-500">Noble room into the historical Torino</h3>
+                    <h3 className=" text-gray-500">2 Rooms</h3>
+                    <div className="mt-1 flex items-center underline text-[#222222]">
+                        <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
                     </div>
 
                 </div>
             </div>
+        </div>
         </div>
     )
 }

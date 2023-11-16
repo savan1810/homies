@@ -12,7 +12,7 @@ const Page = () => {
   return (
     <div className='overflow-x-hidden'>
       <Navbar />
-      <div className='h-[100vh] w-[100vw]' style={{ backgroundImage: "url(/login_bg.svg)" }}>
+      <div className='h-[85vh] w-[100vw]' style={{ backgroundImage: "url(/login_bg.svg)" }}>
         {/* <Image src="/login_bg.svg"  alt='login_bg'/> */}
 
         <div className='grid lg:grid-cols-2 grid-cols-1 h-full w-full'>
@@ -21,7 +21,7 @@ const Page = () => {
             <p className='text-4xl mt-4 font-bold'>Login to continue</p>
           </div>
           <div className=' lg:w-3/5   bg-white mx-auto flex justify-center items-center  sm:my-10 my-16 rounded-xl'>
-            <div className=' z-10 px-4   mx-auto flex flex-col items-center justify-center sm:gap-12 gap-20 '>
+            <div className=' z-10 px-4   mx-auto flex flex-col items-center justify-center sm:gap-10 gap-20 '>
               <div className='text-2xl   mb-4 text-center  tracking-wide'>
                 <p className='font-semibold'>HOMIES</p>
                 <p className="mt-4 text-xl">Let&lsquo;s Login</p>

@@ -97,7 +97,7 @@ const Page = () => {
 
                                 <Button component="label" variant="" className=" flex justify-start   hover:border-gray-200 hover:bg-white  text-gray-400 rounded-lg" startIcon={<CloudUploadIcon className='text-gray-400'
                                 />}>
-                                    <span className='text-gray-400'>Upload file</span>
+                                    <span className='text-gray-400 '>Upload file</span>
                                     <VisuallyHiddenInput type="file" />
                                 </Button>
                             </div>

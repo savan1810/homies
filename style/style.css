@@ -1,15 +1,24 @@
-.border_transition:after{
+.border_transition::after{
     content: "";
     position: absolute;
     top: 120%;
     left: 0;
     /* FBA1B7 */
-    background-color:  #1d4ed8;
+    background-color:#FF8E9E ;
     width: 0;
     height: 2px;
     transition:  0.7s;
 }
 
+.fadeBottom{
+    height:200px;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.4),black); 
+}
+
+#login:hover{
+    background-image: linear-gradient(to top, #ff4495 0%, #ff6d6d 100%,#7db9e8 100%);
+  
+}
 .border_transition:hover:after{
     width:100%
 }
@@ -25,7 +34,7 @@
     /* background-color: rgb(15,23,42); */
     /* background-image: url('/body-bg.svg'); */
     background-image:
-    linear-gradient(to bottom, rgba(14, 13, 13, 0.795), rgba(14, 13, 13, 0.795)),
+    linear-gradient(to right, rgba(14, 13, 13, 0.1), rgba(14, 13, 13, 0.1)),
     url('/home.jpeg');
     /* background-image: url( '/body-bg.svg');  */
     background-size: cover;  

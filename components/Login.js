@@ -37,7 +37,7 @@ const Page = () => {
 
 
   return (
-    <div className='z-10 back_image h-[80vh] md:w-2/5 lg:w-1/3 sm:1/2 w-4/5 flex justify-center items-center mx-auto'>
+    <div className='z-10 back_image  md:w-2/5 lg:w-1/3 sm:1/2 w-4/5 flex justify-center items-center mx-auto'>
     <div className='bg-white z-10 p-4 mx-auto rounded-2xl border shadow-xl flex-col items-center justify-center '>
       <p className="md:text-2xl text-xl font-medium text-center  tracking-wider">Login</p>
       <form className="mt-8 mx-auto  ">
