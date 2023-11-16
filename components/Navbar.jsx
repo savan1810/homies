@@ -38,10 +38,10 @@ const Navbar = () => {
         ${pathname === '/apartment' && '  border-b '}
         `}>
 
-            <div className={`py-2     ${pathname === '/login' && ' bg-black'}   opacity-90 flex items-center justify-between px-8`}>
+            <div className={`py-2  h-[15vh]   ${pathname === '/login' && ' bg-black'}   opacity-90 flex items-center justify-between px-8`}>
                 <div className='flex justify-center items-center gap-4'>
-                    <Link href='/'>
-                        <Image src={`/logo_final.png`} height={90} width={90} alt='Homies' />
+                    <Link href='/' className='tracking-widest font-semibold text-3xl text-[#ff6d6d]'>
+                        HOMIES
                     </Link>
                     {/* <Link href='/'>
                     <Image src="/insta.jpeg" height={30} width={30} alt='Instagram' />
