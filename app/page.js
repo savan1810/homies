@@ -75,15 +75,15 @@ export default function Home() {
 
         <div className='ml-10 flex gap-4 text-gray-500 underline'>
           <span>Privacy & policy</span>
-          <span className=''>Cookie setting</span>
+          {/* <span className=''>Cookie setting</span> */}
         </div>
-        <div className='mr-5 flex gap-2'>
+        <div className='mr-5 sm:flex flex flex-col gap-2'>
 
         <Link href='/'>
-          <InstagramIcon  fontSize="large" className='text-gray-700' />
+          <InstagramIcon  fontSize="large" className='text-gray-600/80' />
         </Link>
         <Link href='/' className=''>
-          <FacebookIcon color="" fontSize="large"  className='text-gray-700'/>
+          <FacebookIcon color="" fontSize="large"  className='text-gray-600/80'/>
         </Link>
         </div>
       </div>
