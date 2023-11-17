@@ -2,18 +2,16 @@
 
 import Navbar from '@/components/Navbar'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import TextField from '@mui/material/TextField';
 
 const Page = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+ 
 
   return (
     <div className='overflow-x-hidden'>
       <Navbar />
       <div className='h-[88vh] w-[100vw] bg-[rgb(251,252,253)]' >
-        {/* <Image src="/login_bg.svg"  alt='login_bg'/> */}
 
         <div className='grid lg:grid-cols-2 grid-cols-1 h-full w-full'>
           <div className='  w-full h-full hidden lg:flex lg:flex-col ml-20 justify-center '>
