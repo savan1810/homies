@@ -21,7 +21,7 @@ const Page = () => {
             <p className='text-xl font-medium '>HOMIES</p>
             <p className='text-4xl mt-4 font-semibold text-black'>Login to continue</p>
           </div>
-          <div className=' lg:w-3/5 border  bg-white shadow-xl  rounded-2xl mx-auto flex justify-center items-center  sm:my-10 my-16 '>
+          <div className=' lg:w-3/5 w-full border  bg-white shadow-xl  rounded-2xl mx-auto flex justify-center items-center  sm:my-10 my-8 '>
             <div className=' z-10 px-4  w-full mx-auto flex flex-col items-center justify-center sm:gap-10 gap-20  '>
               <div className='text-2xl   mb-4 text-center  tracking-wide'>
                 <p className='font-semibold'>HOMIES</p>

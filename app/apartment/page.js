@@ -294,10 +294,10 @@ const Page = () => {
         <div>
         <Navbar/>
         <div className='bg-[rgb(251,252,253)] '>
-            <div className="pt-10 w-[90%] box-border cursor-pointer  mx-auto grid gap-x-6 gap-y-8 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 z-10">
-                <div className='relative mx-auto group box-border cursor-pointer' >
+            <div onClick={(event)=>event.preventDefault()} className="pt-10 w-[90%] box-border cursor-pointer  mx-auto grid gap-x-6 gap-y-8 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 z-10">
+                <div onClick={(event)=>event.preventDefault()} className='relative mx-auto group box-border cursor-pointer' >
                     <div className="relative z-10  mb-2 rounded-2xl flex">
-                        <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px] sm:object-cover sm:aspect-square" src={slides1[currentIndex1].url} alt="" />
+                        <Image onClick={(event)=>event.preventDefault()} height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px] sm:object-cover sm:aspect-square" src={slides1[currentIndex1].url} alt="" />
                     </div>
                     <div className='hidden group-hover:block absolute top-[30%] z-20 left-5 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide1} icon={faAngleLeft} />
