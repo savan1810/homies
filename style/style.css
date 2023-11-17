@@ -9,7 +9,9 @@
     height: 2px;
     transition:  0.7s;
 }
-
+.high{
+    -webkit-tap-highlight-color: transparent;
+}
 .shadow-nav{
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px;
 }
