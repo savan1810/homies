@@ -29,7 +29,7 @@ const Page = () => {
                                     <div className="flex flex-col">
 
                                         <Link href="/" className="mx-auto">
-                                            <Image height={100} width={100} className="rounded-full drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                            <Image alt='d' height={100} width={100} className="rounded-full drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                                 src="/avtar.jpeg" />
                                         </Link>
 
@@ -44,7 +44,7 @@ const Page = () => {
                                 <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
                                     <div className="flex flex-col">
                                         <Link href="/" className="mx-auto">
-                                            <Image height={100} width={100} className="rounded-full drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                            <Image alt='d' height={100} width={100} className="rounded-full drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                                 src="/avtar.jpeg" />
                                         </Link>
 
@@ -60,7 +60,7 @@ const Page = () => {
                                     <div className="flex flex-col">
 
                                         <Link href="/" className="mx-auto">
-                                            <Image height={100} width={100} className="rounded-full drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                            <Image alt='d' height={100} width={100} className="rounded-full drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                                 src="/avtar.jpeg" />
                                         </Link>
 

@@ -3,10 +3,8 @@
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
 import '../style/style.css'
 import { usePathname } from 'next/navigation'
 import AOS from 'aos';

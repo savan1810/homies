@@ -1,7 +1,6 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';

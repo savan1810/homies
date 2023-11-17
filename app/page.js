@@ -2,10 +2,8 @@
 import Link from 'next/link'
 import '../style/style.css'
 import Navbar from '@/components/Navbar'
-import Image from 'next/image'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import {gray} from '@mui/material/colors'
 
 
 
