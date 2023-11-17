@@ -40,7 +40,7 @@ const Navbar = () => {
 
             <div className={`py-2  h-[12vh] opacity-90 flex items-center justify-between px-8`}>
                 <div className='flex justify-center items-center gap-4'>
-                    <Link href='/'  className='tracking-widest font-semibold text-3xl text-[#F99417]'>
+                    <Link href='/'  className='tracking-widest font-semibold text-3xl text-[#F99417] text-grad' >
                         HOMIES
                     </Link>
                     
