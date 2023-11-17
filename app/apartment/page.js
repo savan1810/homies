@@ -299,7 +299,7 @@ const Page = () => {
             <div onClick={(event)=>event.preventDefault()
             
             }  className="high pt-10 w-[90%] cursor-pointer  mx-auto grid gap-x-6 gap-y-8 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 z-10">
-                <Link href='' className='relative mx-auto group box-border cursor-pointer' >
+                <Link onClick={(event)=>event.preventDefault()}  href=''    className='relative mx-auto group box-border cursor-pointer' >
                     <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image  height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px] sm:object-cover sm:aspect-square" src={slides1[currentIndex1].url} alt="" />
                     </div>
@@ -337,7 +337,7 @@ const Page = () => {
                 </Link>
 
 
-                <Link href='' className='relative mx-auto group box-border cursor-pointer  ' >
+                <Link onClick={(event)=>event.preventDefault()}  href='' className='relative mx-auto group box-border cursor-pointer  ' >
                     <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides2[currentIndex2].url} alt="" />
                     </div>
@@ -374,7 +374,7 @@ const Page = () => {
                         <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
                     </div>
                 </Link>
-                <Link href='' className="relative mx-auto group box-border cursor-pointer  " >
+                <Link onClick={(event)=>event.preventDefault()}  href='' className="relative mx-auto group box-border cursor-pointer  " >
                     <div className="relative  z-10 mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides3[currentIndex3].url} alt="" />
                     </div>
@@ -410,7 +410,7 @@ const Page = () => {
                         <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
                     </div>
                 </Link>
-                <Link href='' className='relative mx-auto group box-border cursor-pointer  ' >
+                <Link onClick={(event)=>event.preventDefault()}  href='' className='relative mx-auto group box-border cursor-pointer  ' >
                     <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl  h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides4[currentIndex4].url} alt="" />
                     </div>
@@ -446,7 +446,7 @@ const Page = () => {
                         <span className="font-medium mr-1">$1000<span className='font-normal '> per month</span></span>
                     </div>
                 </Link>
-                <Link href='' className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
+                <Link onClick={(event)=>event.preventDefault()}  href='' className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
                     <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides5[currentIndex5].url} alt="" />
                     </div>
@@ -482,7 +482,7 @@ const Page = () => {
                     </div>
 
                 </Link>
-                <Link href='' className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
+                <Link onClick={(event)=>event.preventDefault()}  href='' className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
                     <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides6[currentIndex6].url} alt="" />
                     </div>
@@ -518,7 +518,7 @@ const Page = () => {
                     </div>
 
                 </Link>
-                <Link href='' className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
+                <Link onClick={(event)=>event.preventDefault()}  href='' className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
                     <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px] sm:object-cover sm:aspect-square" src={slides7[currentIndex7].url} alt="" />
                     </div>
@@ -554,7 +554,7 @@ const Page = () => {
                     </div>
 
                 </Link>
-                <Link href='' className='relative mx-auto group box-border cursor-pointer  mb-14' >
+                <Link onClick={(event)=>event.preventDefault()}  href='' className='relative mx-auto group box-border cursor-pointer  mb-14' >
                     <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides8[currentIndex8].url} alt="" />
                     </div>
