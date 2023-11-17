@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
       <div className='w-full  back_image ' >
 
-        <div className=' flex justify-center items-center w-full h-[85vh]' >
+        <div className=' flex justify-center items-center w-full h-[88vh]' >
 
           <div className='flex-col justify-center items-center  '>
             <p className='text-gray-300 text-center  font-medium tracking-widest mb-6  ' style={{fontFamily: "josefin sans", lineHeight: "normal"}}>WELCOME TO</p>

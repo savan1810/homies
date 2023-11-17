@@ -32,13 +32,13 @@ const Navbar = () => {
     return (
         <div className={`
         ${pathname === '/' && ' text-white '}  
-        ${pathname === '/about' && ' border-b shadow-2xl '}  
-        ${pathname === '/login' && 'bg-black text-[#e5e7eb]'} 
-        ${pathname === '/signup' && 'bg-black text-[#e5e7eb] '}
-        ${pathname === '/apartment' && '  border-b '}
+        ${pathname === '/about' && ' border-b border-black/30 '}  
+        ${pathname === '/login' && 'border-b border-black/20'} 
+        ${pathname === '/signup' && 'border-b  border-black/20'}
+        ${pathname === '/apartment' && '  border-b border-black/20 '}
         `}>
 
-            <div className={`py-2  h-[15vh]   ${pathname === '/login' && ' bg-black'}   opacity-90 flex items-center justify-between px-8`}>
+            <div className={`py-2  h-[12vh] opacity-90 flex items-center justify-between px-8`}>
                 <div className='flex justify-center items-center gap-4'>
                     <Link href='/' className='tracking-widest font-semibold text-3xl text-[#ff6d6d]'>
                         HOMIES
@@ -67,7 +67,7 @@ const Navbar = () => {
                             <button style={{
                                 // backgroundImage: "linear-gradient(to bottom, #ff4495 0%, #ff6d6d 100%)",
                                 
-                            }} className={`${pathname === '/apartment' ? 'border hover:shadow-lg':'border-2]'} ${pathname === '/about' ? 'border hover:shadow-lg':'border-2   '}  ${pathname === '/' && 'border-2 hover:bg-gradient-to-b from-[#ff4495] to-[#ff6d6d]'} ${pathname === '/login' && 'border-2 hover:bg-gradient-to-b from-[#ff4495] to-[#ff6d6d]'} ${pathname === '/signup' && 'border-2 hover:bg-gradient-to-b from-[#ff4495] to-[#ff6d6d]'} transition ease-out duration-1500  rounded-full   delay-150  -z-10  font-normal text-base px-8 py-2 text-center  -1 tracking-wider`} > 
+                            }} className={`${pathname !== '/' && 'border hover:shadow-lg rounded-lg border-[rgba(0,0,0,0.1)]'} ${pathname === '/' && 'rounded-full border-2 hover:bg-gradient-to-b from-[#ff4495] to-[#ff6d6d]'}  transition ease-out duration-1500     delay-150  -z-10  font-normal text-base px-8 py-2 text-center  -1 tracking-wider`} > 
                                 Login
 
                             </button>

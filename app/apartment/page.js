@@ -293,20 +293,20 @@ const Page = () => {
     return (
         <div>
         <Navbar/>
-        <div className='bg-gray-50/10 '>
+        <div className='bg-[rgb(251,252,253)] '>
             <div className="pt-10 w-[90%] box-border cursor-pointer  mx-auto grid gap-x-6 gap-y-8 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 z-10">
                 <div className='relative mx-auto group box-border cursor-pointer' >
-                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                    <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px] sm:object-cover sm:aspect-square" src={slides1[currentIndex1].url} alt="" />
                     </div>
-                    <div className='hidden group-hover:block absolute top-[30%] left-5 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] z-20 left-5 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide1} icon={faAngleLeft} />
                     </div>
                     {/* Right Arrow */}
-                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] z-20 right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
                         <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide1} />
                     </div>
-                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                    <div className='flex absolute left-[35%] z-20 top-[65%] pb-2 '>
                         {slides1.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -317,7 +317,7 @@ const Page = () => {
                                 
                             </div>))}
                     </div>
-                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                    <div className='absolute z-20 top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg>
@@ -334,7 +334,7 @@ const Page = () => {
 
 
                 <div className='relative mx-auto group box-border cursor-pointer  ' >
-                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                    <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides2[currentIndex2].url} alt="" />
                     </div>
 
@@ -344,14 +344,14 @@ const Page = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg>
                     </div>
-                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5 z-20 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide2} icon={faAngleLeft} />
                     </div>
                     {/* Right Arrow */}
-                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5 z-20 rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
                         <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide2} />
                     </div>
-                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                    <div className='flex absolute left-[35%] z-20 top-[65%] pb-2 '>
                         {slides2.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -371,7 +371,7 @@ const Page = () => {
                     </div>
                 </div>
                 <div className="relative mx-auto group box-border cursor-pointer  " >
-                    <div className="relative  -z-10 mb-2 rounded-2xl flex">
+                    <div className="relative  z-10 mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides3[currentIndex3].url} alt="" />
                     </div>
                     <div className='z-10 absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl '>
@@ -380,14 +380,14 @@ const Page = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg>
                     </div>
-                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide3} icon={faAngleLeft} />
                     </div>
                     {/* Right Arrow */}
-                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
                         <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide3} />
                     </div>
-                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                    <div className='flex absolute left-[35%] z-20 top-[65%] pb-2 '>
                         {slides3.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -407,7 +407,7 @@ const Page = () => {
                     </div>
                 </div>
                 <div className='relative mx-auto group box-border cursor-pointer  ' >
-                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                    <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl  h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]   sm:object-cover sm:aspect-square" src={slides4[currentIndex4].url} alt="" />
                     </div>
                     <div className='z-10 absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60   bg-opacity-50 rounded-2xl '>
@@ -416,14 +416,14 @@ const Page = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg>
                     </div>
-                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5  z-10 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide4} icon={faAngleLeft} />
                     </div>
                     {/* Right Arrow */}
-                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
                         <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide4} />
                     </div>
-                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                    <div className='flex absolute left-[35%] z-20 top-[65%] pb-2 '>
                         {slides4.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -443,17 +443,17 @@ const Page = () => {
                     </div>
                 </div>
                 <div className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
-                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                    <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides5[currentIndex5].url} alt="" />
                     </div>
-                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide5} icon={faAngleLeft} />
                     </div>
                     {/* Right Arrow */}
-                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
                         <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide5} />
                     </div>
-                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                    <div className='flex absolute left-[35%] z-20 top-[65%] pb-2 '>
                         {slides5.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -464,7 +464,7 @@ const Page = () => {
                                 
                             </div>))}
                     </div>
-                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                    <div className='absolute z-10 top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg>
@@ -479,17 +479,17 @@ const Page = () => {
 
                 </div>
                 <div className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
-                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                    <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides6[currentIndex6].url} alt="" />
                     </div>
-                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5 z-10  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide6} icon={faAngleLeft} />
                     </div>
                     {/* Right Arrow */}
-                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5  z-10 rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
                         <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide6} />
                     </div>
-                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                    <div className='flex absolute left-[35%] z-20 top-[65%] pb-2 '>
                         {slides6.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -500,7 +500,7 @@ const Page = () => {
                                 
                             </div>))}
                     </div>
-                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                    <div className='absolute z-10 top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg>
@@ -515,17 +515,17 @@ const Page = () => {
 
                 </div>
                 <div className='relative mx-auto group box-border cursor-pointer  sm:mb-14' >
-                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                    <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px] sm:object-cover sm:aspect-square" src={slides7[currentIndex7].url} alt="" />
                     </div>
-                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide7} icon={faAngleLeft} />
                     </div>
                     {/* Right Arrow */}
-                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
                         <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide7} />
                     </div>
-                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                    <div className='flex absolute left-[35%] z-20 top-[65%] pb-2 '>
                         {slides7.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -536,7 +536,7 @@ const Page = () => {
                                 
                             </div>))}
                     </div>
-                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                    <div className='absolute z-10 top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg>
@@ -551,17 +551,17 @@ const Page = () => {
 
                 </div>
                 <div className='relative mx-auto group box-border cursor-pointer  mb-14' >
-                    <div className="relative -z-10  mb-2 rounded-2xl flex">
+                    <div className="relative z-10  mb-2 rounded-2xl flex">
                         <Image height={285} width={300} className="rounded-2xl h-[345px] w-[365px] sm:h-[285px] sm:w-[300px]  sm:object-cover sm:aspect-square" src={slides8[currentIndex8].url} alt="" />
                     </div>
-                    <div className='hidden group-hover:block absolute top-[30%] left-5  rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%] left-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  cursor-pointer'>
                         <FontAwesomeIcon onClick={prevSlide8} icon={faAngleLeft} />
                     </div>
                     {/* Right Arrow */}
-                    <div className='hidden group-hover:block absolute top-[30%]  right-5  rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
+                    <div className='hidden group-hover:block absolute top-[30%]  right-5 z-10 rounded-full py-1 px-2 bg-black/30 text-white  text-blackcursor-pointer'>
                         <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide8} />
                     </div>
-                    <div className='flex -mt-8 z-10 justify-center pb-2 '>
+                    <div className='flex absolute left-[35%] z-20 top-[65%] pb-2 '>
                         {slides8.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -572,7 +572,7 @@ const Page = () => {
                                 
                             </div>))}
                     </div>
-                    <div className='absolute top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
+                    <div className='absolute z-10 top-[1%] sm:left-[85%] left-[89%] text-black opacity-60 bg-opacity-50 rounded-2xl  '>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24 " strokeWidth={1.5} stroke="white" className="w-8 h-8  ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg>
