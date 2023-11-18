@@ -9,7 +9,11 @@ const Page = () => {
   return (
     <div className='overflow-x-hidden'>
       <Navbar />
-      <div className='h-[88vh] w-[100vw] bg-[rgb(251,252,253)]' >
+      <div className='h-[88vh] w-[100vw] ' >
+       <div aria-hidden="true" class="flex overflow-x-hidden absolute -z-10 -top-96 start-1/2 transform -translate-x-1/2">
+    <div class="bg-gradient-to-r overflow-x-hidden from-violet-300/50 to-purple-100 blur-3xl   h-[44rem] rotate-[-60deg] transform -translate-x-[10rem]  "></div>
+    <div class="bg-gradient-to-tl from-blue-50 overflow-x-hidden via-blue-50 to-blue-50 blur-3xl  w-[98vw] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem] "></div>
+  </div> 
 
         <div className='grid lg:grid-cols-2 grid-cols-1 h-full w-full'>
           <div className='  w-full h-full hidden lg:flex lg:flex-col ml-20 justify-center '>
@@ -31,7 +35,7 @@ const Page = () => {
                  </div>
                 
                 <div className='w-full py-4 text-center'>
-                                <button className='w-full bg-gradient-to-r from-[#2980B9] to-[#6DD5FA]  my-2 text-xl p-4  outline-0 text-white rounded-md' >Login</button>
+                                <button className='w-full bg-gradient-to-r from-[#00A9FF] to-[#A0E9FF]  my-2 text-xl p-4  outline-0 text-white rounded-md' >Login</button>
                             </div>
                 
 

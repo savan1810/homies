@@ -4,7 +4,7 @@
     top: 120%;
     left: 0;
     /* FBA1B7 */
-    background-color:#ff4495;
+    background-color:#7743DB;
     width: 0;
     height: 2px;
     transition:  0.7s;
@@ -16,8 +16,8 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px;
 }
 
-.text-grad{
-    background: -webkit-linear-gradient(#ff4495, #ff6d6d);
+.textGrad{
+   background: -webkit-linear-gradient(#3D30A2, #00A9FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

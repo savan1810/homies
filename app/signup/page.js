@@ -58,8 +58,11 @@ const Page = () => {
     return (
         <div className='overflow-x-hidden'>
             <Navbar />
-            <div className=' w-[100vw] bg-[rgb(251,252,253)] ' >
-
+            <div className=' w-[100vw]  ' >
+            <div aria-hidden="true" class="flex overflow-x-hidden fixed -z-10 -top-96 start-1/2  transform -translate-x-1/2">
+    <div class="bg-gradient-to-r overflow-x-hidden from-violet-300/50 to-purple-100 blur-3xl   h-[44rem] rotate-[-60deg] transform -translate-x-[10rem]  "></div>
+    <div class="bg-gradient-to-tl from-blue-50 overflow-x-hidden via-blue-50 to-blue-50 blur-3xl  w-[98vw] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem] "></div>
+  </div> 
                 <div className='  z-10 flex   lg:w-2/3  justify-center items-center mx-auto  '>
                     <div className='bg-white border px-4 py-4 my-10 mx-auto   shadow-xl rounded-2xl flex-col items-center justify-center z-10 '>
                         <div className='text-2xl  mb-4 text-center  tracking-wide'>
@@ -107,7 +110,7 @@ const Page = () => {
 
 
                             <div className='py-4 text-center'>
-                                <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-xl p-2  outline-0 text-white rounded-md' >Sign Up</button>
+                                <button className='w-full bg-gradient-to-r from-[#00A9FF] to-[#A0E9FF] text-xl p-2  outline-0 text-white rounded-md' >Sign Up</button>
                             </div>
                             <div className='text-center mt-2 text-gray-400'>
                                 <span>Already a member? </span>
