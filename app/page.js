@@ -11,7 +11,7 @@ import Image from 'next/image';
 export default function Home() {
 
   return (
-    <div className='bg-gradient-to-r h-full w-full from-[#DFCCFB] to-[#E0F4FF]'>
+    <div className='h-full w-full lg:bg-gradient-to-r  lg:from-[#DFCCFB] lg:to-[#E0F4FF] bg-gradient-to-r  from-[#e2d3f8] to-[#E0F4FF]'>
       <Navbar />
       <div class=" ">
         <div className='w-[95%] mx-auto ' >
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
            
           </div>
-          <div className='sm:flex hidden  w-full'>
+          <div className='sm:flex hidden w-full'>
           <div className='w-full flex justify-between  '>
 
             <div className='ml-10 flex gap-4 items-end text-[rgb(150,153,166)] underline'>

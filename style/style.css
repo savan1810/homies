@@ -17,7 +17,7 @@
 }
 
 .textGrad{
-   background: -webkit-linear-gradient(#3D30A2, #00A9FF);
+   background: -webkit-linear-gradient( #00A9FF,#3D30A2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
